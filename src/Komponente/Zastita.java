@@ -15,6 +15,24 @@ public class Zastita {
 	public void prorada(){}
 	public void prestanak(){}
 	public void iskljuciUkljuci(){}
+	
+	public void printIdentifikator(){	System.out.println(identifikator); }
+	public void printName(){	System.out.println(name); }
+	public void printNaponskaRazina(){	System.out.println(naponskaRazina); }
+	public void printStanje(){	System.out.println(stanje); }
+	public void printKvar(){	System.out.println(kvar); }
+	public void printIskljucenje(){	System.out.println(iskljucenje); }
+	public void printPrekidac(){	System.out.println(prekidac.getName()); }
+	
+	public void printAll(){
+		printIdentifikator();
+		printName();
+		printNaponskaRazina();
+		printStanje();
+		printKvar();
+		printIskljucenje();
+		printPrekidac();
+	}
 	public Integer getIdentifikator() {
 		return identifikator;
 	}
@@ -38,10 +56,11 @@ public class Zastita {
 	}
 	public void setStanje(Boolean stanje) {
 		this.stanje = stanje;
-		if(stanje)
+		if((stanje) && (prekidac!=null))
 			prekidac.setStanje("iskljucen");
 		else
-			prekidac.setStanje("ukljucen");
+			if(prekidac!=null)
+				prekidac.setStanje("ukljucen");
 	}
 	public Boolean getKvar() {
 		return kvar;
@@ -54,10 +73,19 @@ public class Zastita {
 	}
 	public void setIskljucenje(Boolean iskljucenje) {
 		this.iskljucenje = iskljucenje;
-		if(stanje)
+		if((stanje) && (prekidac!=null))
 			prekidac.setStanje("iskljucen");
 		else
-			prekidac.setStanje("ukljucen");
+			if(prekidac!=null)
+				prekidac.setStanje("ukljucen");
+	}
+	
+	
+	public Prekidac getPrekidac() {
+		return prekidac;
+	}
+	public void setPrekidac(Prekidac prekidac) {
+		this.prekidac = prekidac;
 	}
 	public Zastita() {
 		super();
@@ -74,6 +102,7 @@ public class Zastita {
 		this.iskljucenje = iskljucenje;
 		this.prekidac = prekidac;
 	}
+
 
 	
 	

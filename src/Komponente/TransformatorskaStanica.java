@@ -9,6 +9,8 @@ public class TransformatorskaStanica {
 	private Boolean smetnje;
 	private Integer identifikator;
 	private String name;
+	private Polje polje1;
+	private Polje polje2;
 
 	public void ispisStanja(){
 		
@@ -50,13 +52,15 @@ public class TransformatorskaStanica {
 		this.name = name;
 	}
 	public TransformatorskaStanica(Boolean stanje, Boolean zastite, Boolean smetnje, Integer identifikator,
-			String name) {
+			String name, Polje polje1, Polje polje2) {
 		super();
 		this.stanje = stanje;
 		this.zastite = zastite;
 		this.smetnje = smetnje;
 		this.identifikator = identifikator;
 		this.name = name;
+		this.polje1 = polje1;
+		this.polje2 = polje2;
 	}
 	
 	

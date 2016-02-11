@@ -16,6 +16,25 @@ public class Polje {
 	DistantnaZastita z_distantna;
 	Prekidac prekidac;
 	
+	
+
+	public void printIdentifikator(){	System.out.println(identifikator); }
+	public void printName(){	System.out.println(name); }
+	public void printNaponskaRazina(){	System.out.println(naponskaRazina); }
+	public void printPodNaponom(){	System.out.println(podNaponom); }
+	public void printUkljucenaZastita(){	System.out.println(ukljucenaZastita); }
+	public void printTipUkljuceneZastite(){	System.out.println(tipUkljuceneZastite); }
+
+	
+	public void printAll(){
+		printIdentifikator();
+		printName();
+		printNaponskaRazina();
+		printPodNaponom();
+		printUkljucenaZastita();
+		printTipUkljuceneZastite();
+	}
+	
 	public void ispisStanja(){}
 	
 	public void ukljucenjeNapona(){}
@@ -87,6 +106,18 @@ public class Polje {
 		this.z_apu = z_apu;
 		this.z_distantna = z_distantna;
 		this.prekidac = prekidac;
+	}
+
+	@Override
+	public String toString() {
+		return "Polje [podNaponom=" + podNaponom + ", naponskaRazina=" + naponskaRazina + ", ukljucenaZastita="
+				+ ukljucenaZastita + ", tipUkljuceneZastite=" + tipUkljuceneZastite + ", identifikator=" + identifikator
+				+ ", name=" + name + ", r_uzemljenje=" + r_uzemljenje + ", r_dv=" + r_dv + ", r_linijski=" + r_linijski
+				+ ", z_prekidac=" + z_prekidac + ", z_apu=" + z_apu + ", z_distantna=" + z_distantna + ", prekidac="
+				+ prekidac + ", getPodNaponom()=" + getPodNaponom() + ", getNaponskaRazina()=" + getNaponskaRazina()
+				+ ", getUkljucenaZastita()=" + getUkljucenaZastita() + ", getTipUkljuceneZastite()="
+				+ getTipUkljuceneZastite() + ", getIdentifikator()=" + getIdentifikator() + ", getName()=" + getName()
+				+ "]";
 	}
 
 

@@ -6,7 +6,27 @@ public class Rastavljac {
 	private Boolean stanje;
 	private Boolean komanda;
 	private Integer naponskaRazina;
-	private String tip; //TIP -> linijski, uzemljenje, dv
+	
+	private Prekidac prekidac;
+	
+	public void printIdentifikator(){	System.out.println(identifikator); }
+	public void printName(){	System.out.println(name); }
+	public void printStanje(){	System.out.println(stanje); }
+	public void printKomanda(){	System.out.println(komanda); }
+	public void printNaponskaRazina(){	System.out.println(naponskaRazina); }
+	public void printPrekidac(){	System.out.println(prekidac); }
+	
+	public void printAll(){
+		printIdentifikator();
+		printName();
+		printStanje();
+		printKomanda();
+		printNaponskaRazina();
+
+		
+		
+		printPrekidac();
+	}
 	
 	public void ispisStanja(){}
 	public void ukljuci(){}
@@ -33,6 +53,8 @@ public class Rastavljac {
 	}
 	public void setStanje(Boolean stanje) {
 		this.stanje = stanje;
+		if(prekidac.getStanje()=="iskljucen")
+			stanje=false;
 	}
 	public Boolean getKomanda() {
 		return komanda;
@@ -48,21 +70,28 @@ public class Rastavljac {
 		this.naponskaRazina = naponskaRazina;
 	}
 	
-	public String getTip() {
-		return tip;
+
+	public Prekidac getPrekidac() {
+		return prekidac;
 	}
-	public void setTip(String tip) {
-		this.tip = tip;
+	public void setPrekidac(Prekidac prekidac) {
+		this.prekidac = prekidac;
 	}
-	public Rastavljac(Integer identifikator, String name, Boolean stanje, Boolean komanda, Integer naponskaRazina, String tip) {
+	public Rastavljac(Integer identifikator, String name, Boolean stanje, Boolean komanda, Integer naponskaRazina) {
 		super();
 		this.identifikator = identifikator;
 		this.name = name;
 		this.stanje = stanje;
 		this.komanda = komanda;
 		this.naponskaRazina = naponskaRazina;
-		this.tip = tip;
+		
 	}
 	
+	@Override
+	public String toString() {
+		return "Rastavljac [identifikator=" + identifikator + ", name=" + name + ", stanje=" + stanje + ", komanda="
+				+ komanda + ", naponskaRazina=" + naponskaRazina + ", prekidac=" + prekidac + "]";
+	}
 	
+//
 }
