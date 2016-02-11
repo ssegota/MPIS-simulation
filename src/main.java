@@ -90,7 +90,11 @@ public class main {
 		
 		//RUNNING
 
-		prekidac1.printAll();
+		prekidac1.printStanje();
+		prekidac2.printStanje();
+		z_apu2.setZastita1p(true);
+		prekidac1.printStanje();
+		prekidac2.printStanje();
 		System.out.println("Done.");
 	}
 

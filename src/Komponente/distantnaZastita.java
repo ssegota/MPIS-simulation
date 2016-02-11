@@ -22,6 +22,8 @@ public class DistantnaZastita  extends Zastita{
 
 	public void setPoticaj(Boolean poticaj) {
 		this.poticaj = poticaj;
+		if(poticaj)
+			setStanje(false);
 	}
 
 	public DistantnaZastita(Integer identifikator, String name, Integer naponskaRazina, Boolean stanje, Boolean kvar,

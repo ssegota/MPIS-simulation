@@ -24,12 +24,16 @@ public class Apu  extends Zastita{
 	}
 	public void setZastita1p(Boolean zastita1p) {
 		this.zastita1p = zastita1p;
+		if(zastita1p)
+			setStanje(false);
 	}
 	public Boolean getZastita3p() {
 		return zastita3p;
 	}
 	public void setZastita3p(Boolean zastita3p) {
 		this.zastita3p = zastita3p;
+		if(zastita3p)
+			setStanje(false);
 	}
 	public Apu(Integer identifikator, String name, Integer naponskaRazina, Boolean stanje, Boolean kvar,
 			Boolean iskljucenje, Boolean zastita1p, Boolean zastita3p, Prekidac prekidac) {

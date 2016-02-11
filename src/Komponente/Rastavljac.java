@@ -61,6 +61,8 @@ public class Rastavljac {
 	}
 	public void setKomanda(Boolean komanda) {
 		this.komanda = komanda;
+		if(!komanda)
+			setStanje(false);
 	}
 
 	public Integer getNaponskaRazina() {

@@ -23,6 +23,8 @@ public class ZastitaZatajenjaPrekidaca extends Zastita{
 
 	public void setIskljucenje2(Boolean iskljucenje2) {
 		this.iskljucenje2 = iskljucenje2;
+		if(iskljucenje2)
+			setStanje(false);
 	}
 
 	public ZastitaZatajenjaPrekidaca(Integer identifikator, String name, Integer naponskaRazina, Boolean stanje, Boolean kvar,

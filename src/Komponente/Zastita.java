@@ -56,7 +56,7 @@ public class Zastita {
 	}
 	public void setStanje(Boolean stanje) {
 		this.stanje = stanje;
-		if((stanje) && (prekidac!=null))
+		if((!stanje) && (prekidac!=null))
 			prekidac.setStanje("iskljucen");
 		else
 			if(prekidac!=null)
@@ -67,6 +67,8 @@ public class Zastita {
 	}
 	public void setKvar(Boolean kvar) {
 		this.kvar = kvar;
+		if(kvar)
+			setStanje(false);
 	}
 	public Boolean getIskljucenje() {
 		return iskljucenje;

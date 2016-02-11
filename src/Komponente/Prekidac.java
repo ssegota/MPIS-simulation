@@ -85,36 +85,48 @@ public class Prekidac {
 	}
 	public void setBlokadaRada(Boolean blokadaRada) {
 		this.blokadaRada = blokadaRada;
+		if(blokadaRada)
+			setStanje("iskljucen");
 	}
 	public Boolean getBlokadaIsklopa() {
 		return blokadaIsklopa;
 	}
 	public void setBlokadaIsklopa(Boolean blokadaIsklopa) {
 		this.blokadaIsklopa = blokadaIsklopa;
+		if(blokadaIsklopa)
+			setStanje("kvar");
 	}
 	public Boolean getGubitakSF6() {
 		return gubitakSF6;
 	}
 	public void setGubitakSF6(Boolean gubitakSF6) {
 		this.gubitakSF6 = gubitakSF6;
+		if(gubitakSF6)
+			setStanje("kvar");
 	}
 	public Integer getTlakUlja() {
 		return tlakUlja;
 	}
 	public void setTlakUlja(Integer tlakUlja) {
 		this.tlakUlja = tlakUlja;
+		if(tlakUlja<=0)
+			setStanje("kvar");
 	}
 	public Boolean getGubitakUlja() {
 		return gubitakUlja;
 	}
 	public void setGubitakUlja(Boolean gubitakUlja) {
 		this.gubitakUlja = gubitakUlja;
+		if(gubitakUlja)
+			setStanje("kvar");
 	}
 	public Boolean getGubitakN2() {
 		return gubitakN2;
 	}
 	public void setGubitakN2(Boolean gubitakN2) {
 		this.gubitakN2 = gubitakN2;
+		if(gubitakN2)
+			setStanje("kvar");
 	}
 	
 	
