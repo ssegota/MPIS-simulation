@@ -7,14 +7,8 @@
  *
  */
 
-import Komponente.Polje;
-import Komponente.TransformatorskaStanica;
-import Komponente.Prekidac;
-import Komponente.Rastavljac;
-import Komponente.DistantnaZastita;
-import Komponente.Apu;
-import Komponente.Zastita;
-import Komponente.ZastitaZatajenjaPrekidaca;
+import Komponente.*;
+import graphic.DrawSchematic;
 public class main {
 
 	/**
@@ -96,6 +90,8 @@ public class main {
 		prekidac1.printStanje();
 		prekidac2.printStanje();
 		System.out.println("Done.");
+		DrawSchematic ex = new DrawSchematic();
+		ex.run();
 	}
 
 }
